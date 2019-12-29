@@ -12,12 +12,11 @@ jobs:
     - name: Run a one-line script
       run: |
         sudo apt update
-        sudo apt upgrade -y
         sudo apt install openssh-server -y
         wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O ngrok.zip
         unzip ngrok.zip
         chmod  755 ngrok
-        sudo /etc/init.d/SSH start
+        sudo /etc/init.d/ssh start
         ./ngrok authtoken 7GTsuP7sewoVemaBZrbZK_6C9w29ynA6r6TaSu6F2p5
         ./ngrok tcp 22
     
